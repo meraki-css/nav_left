@@ -1,6 +1,8 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+
     
 }
 
@@ -18,7 +20,8 @@
         flex-direction: row;
 
         .navbar-brand {
-            color: #fff; 
+            color: #fff;
+            text-decoration: none; 
          }
      
          .navbar-brand:hover {
@@ -27,25 +30,45 @@
      
           .navbar-link {
 
+
+
             .burger-menu {
                 font-size: 25px;
                 position: absolute;
-                right: 27px;
+                right: 40px;
                 top: 30px;  
                 display: none;
                 transition: 0.3s;
             }
+
+            #navbar-link-items {
+                display: flex;
+            }
              .navbar-link-items {
-                 display: flex;
+                 
                  justify-content: center;
                  align-items: center;
+                 flex-direction: row;
                  position: relative;
                  left: 20%;
-                 transition: 0.3s;
+                 transition: 1s;
      
                  li {
                      list-style-type: none;
                      margin-left: 20px;
+
+                     a {
+                        color: #fff;
+                        text-decoration: none;
+                     }
+
+                     a:hover {
+                        color: #fff;
+                     }
+                 }
+
+                 .close-mob {
+                    display: none;
                  }
              }
           }
@@ -68,11 +91,44 @@
                 .burger-menu {
                     display: block;
                 }
-                 .navbar-link-items {
 
-                     display: none;
-         
-                 }
+                #navbar-link-items {
+                    display: none;
+                }
+
+                .navbar-link-items {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: absolute;
+                    height: fit-content;
+                    width: 80%;
+                    top: 20%;
+                    left: 3%;
+                    background-color: rgb(11, 11, 40);
+                    padding: 20px;
+                    transition: 1s;
+        
+                    li {
+                        list-style-type: none;
+                        margin-left: -5px;
+                        margin-top: 1%;
+                        width: 90%;
+                        border: 2px solid #fff;
+                        padding: 20px;
+                        text-align: center;
+                        user-select:text;
+                        
+                    }
+
+                    .close-mob {
+                        display: block;
+                        background-color: red;
+                    }
+                }
+
+               
               }
              
         }
